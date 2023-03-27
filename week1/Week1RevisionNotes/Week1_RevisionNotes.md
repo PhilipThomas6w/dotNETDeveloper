@@ -83,15 +83,23 @@ The principle also recognises that micromanaging team members can be counterprod
 
 Overall, the principle emphasizes the importance of creating a positive work environment where individuals feel empowered, supported, and trusted. By building projects around motivated individuals, organizations can foster a culture of excellence and encourage team members to take ownership of their work, resulting in greater satisfaction and productivity.
 
+<br>
+
 ### What is an Agile ceremony?
 
 An Agile ceremony is a scheduled meeting or event that serves a specific purpose in the Agile development process. Agile ceremonies are designed to help team members collaborate effectively, stay focused on project goals, and continuously improve their processes and practices.
+
+<br>
 
 ### What is the most popular Agile method?
 
 The most popular Agile method used in software development contexts is Scrum.
 
+<br>
+
 ![Scrum Framework](./images/ScrumFramework.jpg)
+
+<br>
 
 ### What are the Scrum ceremonies?
 
@@ -108,6 +116,8 @@ In addition to these main ceremonies, some teams might also include the followin
 2. Release Planning: A meeting where the team plans the release of the product by identifying the backlog items that will be delivered in each release.
 3. Sprint Goal Setting: A meeting where the team sets a goal for the upcoming sprint based on the product backlog items.
 
+<br>
+
 ### What are the Scrum artefacts?
 
 In Scrum, artefacts are tangible deliverables or documentation that are used to provide transparency and visibility into the progress of the project. The three Scrum artefacts are:
@@ -116,11 +126,15 @@ In Scrum, artefacts are tangible deliverables or documentation that are used to 
 2. Sprint Backlog: A list of the items from the Product Backlog that the team commits to delivering in the upcoming Sprint. The Sprint Backlog is created by the Development Team during the Sprint Planning meeting and is updated daily during the Daily Scrum.
 3. Increment: The sum of all the Product Backlog items completed during the Sprint and the value of the increments from previous Sprints. The Increment is the sum of all the completed and potentially releasable Product Backlog items that the Development Team has delivered during the Sprint. It represents the progress made by the team and is an important measure of the team's productivity.
 
+<br>
+
 ### What is a sprint?
 
 A sprint is a time-boxed iteration during which the Development Team works to deliver a valuable increment of the product.
 
 All the work necessary to achieve the Product Goal, including Sprint Planning, Daily Scrums, Sprint Review, and Sprint Retrospective, happen within Sprints.
+
+<br>
 
 ### What is a Scrum Master?
 
@@ -131,9 +145,13 @@ The Scrum Master:
 3. Ensures that the team understands and follows the Scrum framework.
 4. Identifies and removes impediments that might prevent the team from reaching the Product Goal.
 
+<br>
+
 ### What are personas?
 
 A user persona is a fictional representation of a typical user or a product or service. A user persona is often modelled by a team to help them understand the needs, goals, behaviours and motivations of their users.
+
+<br>
 
 ### What makes a good user story?
 
@@ -144,7 +162,9 @@ A good user story should be user-centric and meet the six criteria summarised by
 - Valuable - stories should be written so that the benefits to the customer or users are obvious. The story should address a real need or problem and justify the development effort required to complete the story.
 - Estimable - the team should be able to estimate the effort required to complete the story.
 - Small - user stories should be small enough to complete in a single sprint.
-- Testable - the team should be able to write acceptance criteria and test that the delivered feature meets the customer or user’s needs.
+- Testable - the team should be able to write acceptance criteria and test that the delivered feature meets the customer or user's needs.
+
+<br>
 
 ### What is Gherkin script?
 
@@ -162,9 +182,13 @@ In this example, the scenario describes the behaviour of the login feature, and 
 
 Gherkin scripts can be used to generate automated tests using tools such as Cucumber, which can parse the scripts and generate executable code in a variety of programming languages.
 
+<br>
+
 ### What is a Definition of Done?
 
 In agile software development, a "definition of done" (DoD) is a shared understanding among the development team, product owner, and other stakeholders of the criteria that must be met before a product backlog item (PBI) is considered complete.
+
+<br>
 
 ### What makes a good Definition of Done?
 
@@ -181,9 +205,13 @@ A good definition of done typically includes the following characteristics:
 
 A good definition of done ensures that the development team delivers a high-quality product increment that meets the expectations of stakeholders and users. It also helps to foster transparency, collaboration, and continuous improvement within the team, by providing a clear understanding of what constitutes "done" for each PBI.
 
+<br>
+
 ### What is a Definition of Ready?
 
 A Definition of Ready (DoR) is a set of criteria that a user story or feature must meet before it is considered ready to be worked on by the development team.
+
+<br>
 
 ### What are the advantages and disadvantages of agile methodologies?
 
@@ -201,11 +229,15 @@ A Definition of Ready (DoR) is a set of criteria that a user story or feature mu
 3. Dependence on team members: Agile methodology relies heavily on the collaboration and communication between team members, which can be challenging if team members are unavailable or uncooperative.
 4. Risk of scope creep: The willingness to accept changing requirements can increase the risk of scope creep.
 
+<br>
+
 ## Git
 
 ### What command do you use to create a local repository?
 
 `git clone`
+
+<br>
 
 ### Why do we use version control for 1-person projects?
 
@@ -215,6 +247,8 @@ Version control also allows us to experiment with new features to see how they a
 
 Version control can also serve as a form of documentation - commit messages can provide us with a form of version history for a particular project.
 
+<br>
+
 ### What command do you use to create a local repository?
 
 `git init`
@@ -222,6 +256,8 @@ Version control can also serve as a form of documentation - commit messages can 
 ### What command do you use to clone a remote repository?
 
 `git clone`
+
+<br>
 
 ### What is staging?  What command do you use to stage files?
 
@@ -233,6 +269,8 @@ The staging area, also known as the index, is a container that holds changes tha
 
 We can use the `git diff` command to see the differences between the working directory and the staging area, or the `git status` command to see the current status of the staging area.
 
+<br>
+
 ### What is a commit?
 
 A commit is a snapshot of the changes made to the files in a repository at a particular point in time. It's a way to record changes to your code and document *what* was changed, *when* it was changed, and *why* it was changed.
@@ -243,17 +281,25 @@ Each commit in Git has a unique identifier, known as a hash, which allows you to
 
 Commits in Git are organized in a historical tree-structure; each commit, besides the initial commit, points to an ancestor. By using this history, we can view the changes that were made to a file over time, revert to a previous version of the file, or merge changes made in separate branches.
 
+<br>
+
 ### How do you save any local changes to the remote repository?
 
 Local commits can be saved to a remote repository by using the `git push` command, followed by modifiers that point to the branch we wish to push to i.e., `git push [alias] [branch]`. For example, to push to the main branch, we can use the command `git push origin main`.
+
+<br>
 
 ### What is a git-ignore file and why is it important?
 
 A `.gitignore` file is a special file saved in the root directory of your Git repository that tells Git which files or directories to ignore when tracking changes in that repository. It is important because it allows us to avoid committing files that are unnecessary for the functioning of the project and add little to no value.
 
+<br>
+
 ## PowerShell
 
 In the command line/terminal:
+
+<br>
 
 ### What command creates a new directory?
 
@@ -265,10 +311,14 @@ We can use the following commands to create a new directory:
 
 `New-Item`
 
+<br>
+
 ### How do you move into a sub-directory and back to a parent directory?
 
 - To change directory to a subdirectory of your current working directory, use `cd \subdirectory`or `cd .\subdirectory`
 - To change directory to the parent directory of your current working directory, use `cd ..`
+
+<br>
 
 ### How do you return to the root folder?
 
@@ -277,6 +327,8 @@ We can use the following commands to create a new directory:
 ### How do you return to the user’s home directory?
 
 `cd ~`
+
+<br>
 
 ### How do you create a text file?
 
@@ -304,6 +356,8 @@ You can also chain the commands to create a new text file and open it in Notepad
 New-Item -ItemType File -Name "C:\mydir\myfile.txt" | Invoke-Item
 ```
 
+<br>
+
 ### How do you print the contents of a text file to the console?
 
 To print the contents of a text file to the PowerShell terminal (console), you can use the `Get-Content` command e.g.,
@@ -311,6 +365,8 @@ To print the contents of a text file to the PowerShell terminal (console), you c
 ```powershell
 Get-Content myfile.txt
 ```
+
+<br>
 
 ### What are some other useful commands that you learnt?
 
