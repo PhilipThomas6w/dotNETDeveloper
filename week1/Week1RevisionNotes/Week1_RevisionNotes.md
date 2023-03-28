@@ -166,9 +166,9 @@ A good user story should be user-centric and meet the six criteria summarised by
 
 <br>
 
-### What is Gherkin script?
+### What is a Gherkin script?
 
-A _Gherkin script_ is a plaint-text specification language used in _Behaviour Driven Development (BDD)_ to write software acceptance tests. It uses a syntax that is simple to read and write for both technical and non-technical stakeholders alike. Test cases, or scenarios, are described in terms of preconditions, actions, and results using specific _keywords_, namely `Given`, `And`, `When`, and `Then`. For example:
+A _Gherkin script_ is a plain-text specification language used in _Behaviour Driven Development (BDD)_ to write software acceptance tests. It uses a syntax that is simple to read and write for both technical and non-technical stakeholders alike. Test cases, or scenarios, are described in terms of preconditions, actions, and results using specific _keywords_, namely `Given`, `And`, `When`, and `Then`. For example:
 
 ```gherkin
 Scenario: Login with valid credentials
@@ -232,13 +232,6 @@ A Definition of Ready (DoR) is a set of criteria that a user story or feature mu
 <br>
 
 ## Git
-
-### What command do you use to create a local repository?
-
-`git clone`
-
-<br>
-
 ### Why do we use version control for 1-person projects?
 
 Version control allows us to track changes to our code over time, and to rollback changes if desired or necessary.
@@ -263,7 +256,7 @@ Version control can also serve as a form of documentation - commit messages can 
 
 Staging is the process of preparing changes in a working directory for committing to a Git repository. Before a file can be committed, it must first be staged*.
 
-You can stage changes using the **`git add`** command. Staging a change instructs Git to include the staged changes in the next commit.
+You can stage changes using the `git add` command. Staging a change instructs Git to include the staged changes in the next commit.
 
 The staging area, also known as the index, is a container that holds changes that have been added to the Git repository but have not yet been committed. The staging area is used to organise changes into logical units, known as commits, and to review and modify changes before they are committed.
 
@@ -275,7 +268,7 @@ We can use the `git diff` command to see the differences between the working dir
 
 A commit is a snapshot of the changes made to the files in a repository at a particular point in time. It's a way to record changes to your code and document *what* was changed, *when* it was changed, and *why* it was changed.
 
-Once you've staged your changes, you can create a commit using the **`git commit`** command. This will create a new snapshot of your files, incorporating the changes you've staged.
+Once you've staged your changes, you can create a commit using the `git commit` command. This will create a new snapshot of your files, incorporating the changes you've staged.
 
 Each commit in Git has a unique identifier, known as a hash, which allows you to refer to that specific commit in the future. When you create a commit, you can also add a commit message to document the changes that were made, by adding the `-m` modifier to the `git commit` command i.e., `git commit -m "Commit message"`
 
