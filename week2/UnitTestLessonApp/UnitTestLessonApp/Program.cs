@@ -1,22 +1,24 @@
 ﻿namespace UnitTestLessonApp
 {
-    internal class Program
+    public class Program
     {
         static void Main()
         {
-            int inputTimeOfDay = Int32.Parse(Console.ReadLine());
-
-            Console.WriteLine(GetMessage(inputTimeOfDay));
-
+            int timeOfDay = DateTime.Now.Hour;
+            Console.WriteLine(GetMessage(timeOfDay));
         }
 
-        private static string GetMessage(int timeOfDay)
+        public static string GetMessage(int timeOfDay)
         {
-            if (timeOfDay >= 5 && timeOfDay < 11)
+            if (timeOfDay < 5)
+            {
+                return "Good evening!";
+            }
+            else if (timeOfDay < 12)
             {
                 return "Good morning!";
             }
-            else if (timeOfDay >= 12 && timeOfDay < 18)
+            else if (timeOfDay < 18)
             {
                 return "Good afternoon!";
             }
@@ -27,3 +29,4 @@
         }
     }
 }
+
