@@ -246,6 +246,8 @@ Version control can also serve as a form of documentation - commit messages can 
 
 `git init`
 
+<br>
+
 ### What command do you use to clone a remote repository?
 
 `git clone`
@@ -316,6 +318,8 @@ We can use the following commands to create a new directory:
 ### How do you return to the root folder?
 
 `cd \`
+
+<br>
 
 ### How do you return to the user’s home directory?
 
