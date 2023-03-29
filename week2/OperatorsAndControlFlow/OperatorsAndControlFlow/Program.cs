@@ -1,4 +1,7 @@
-﻿namespace OperatorsAndControlFlow;
+﻿using System.Globalization;
+using Loops;
+
+namespace OperatorsAndControlFlow;
 
 internal class Program
 {
@@ -66,7 +69,7 @@ internal class Program
         int x = 5;
         int y = 10;
 
-        
+
 
 
 
@@ -100,7 +103,7 @@ internal class Program
 
         // for
         // Loops a specified number of times; the body of the loop must change the loop variable
-        
+
         for (int i = 0; i < 10; i++)
         {
             Console.WriteLine(i);
@@ -132,7 +135,17 @@ internal class Program
         {
         } while (true);
 
-        
+        // implement above, to return the number of weeks and days
+
+        #endregion
+
+        List<int> nums = new List<int> { 10, 6, 22, -17, 3 };
+
+        Console.WriteLine("Highest number using a for loop: " + LoopExamples.HighestForLoop(nums));
+        Console.WriteLine("Highest number using a foreach loop: " + LoopExamples.HighestForeachLoop(nums));
+        Console.WriteLine("Highest number using a while loop: " + LoopExamples.HighestWhileLoop(nums));
+        Console.WriteLine("Highest number using a dowhile loop: " + LoopExamples.HighestDoWhileLoop(nums));
+
 
     }
 
@@ -163,9 +176,6 @@ internal class Program
 
     }
 
-    // implement above, to return the number of weeks and days
-
-    #endregion
-
-
+    
+    
 }

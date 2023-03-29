@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorsAndControlFlow", "OperatorsAndControlFlow\OperatorsAndControlFlow.csproj", "{894727D6-A318-4F9C-B86A-88A72F70264A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperatorsAndControlFlow", "OperatorsAndControlFlow\OperatorsAndControlFlow.csproj", "{894727D6-A318-4F9C-B86A-88A72F70264A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopExamples", "LoopExamples\LoopExamples.csproj", "{FF7445A3-4743-488E-935E-A5EF2D6F0306}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{894727D6-A318-4F9C-B86A-88A72F70264A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{894727D6-A318-4F9C-B86A-88A72F70264A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{894727D6-A318-4F9C-B86A-88A72F70264A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF7445A3-4743-488E-935E-A5EF2D6F0306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7445A3-4743-488E-935E-A5EF2D6F0306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7445A3-4743-488E-935E-A5EF2D6F0306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7445A3-4743-488E-935E-A5EF2D6F0306}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
