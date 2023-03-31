@@ -6,12 +6,17 @@ namespace DataTypes_Lib
     {
         public static short UIntToShort(uint num)
         {
+            if (num > short.MaxValue)
+            {
+                throw new OverflowException();
+            }
+            
             return (short)num;
         }
 
         public static long FloatToLong(float num)
         {
-            return (long)num;
+            return (long)Math.Round(num);  // Not sure why Math.Floor didn't work here...
         }
     }
 }

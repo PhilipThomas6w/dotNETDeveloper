@@ -12,17 +12,25 @@ namespace DataTypes_Test
             Assert.That(IntegerCalc.Add(3, 7), Is.EqualTo(10));
         }
 
-        [Test]
+        [Test] 
         public void WhenGivenTwoVeryLargeIntegers_Add_ThrowsAnException()
         {
-            Assert.That(() => IntegerCalc.Add(int.MaxValue, 3), Throws.TypeOf<OverflowException>());
+            Assert.That(() => IntegerCalc.Add(int.MaxValue, 3), Throws.TypeOf<OverflowException>()); 
         }
+        /* The purpose of passing int.MaxValue as the first argument and 3 as the second argument is to create
+         * a scenario where the sum of the two integers exceeds the maximum value of an integer. The maximum 
+         * value of an integer is 2,147,483,647; adding 3 to it will result in an integer overflow.
+         */
 
         [Test]
         public void WhenGivenTwoVeryNegativeIntegers_Add_ThrowsAnException()
         {
             Assert.That(() => IntegerCalc.Add(int.MinValue, -3), Throws.TypeOf<OverflowException>());
         }
+        /* This is similar to the test above. The minimum value of an interger is -2,147,483,648; taking 3
+           away from it should likewise result in an integer overflow. We should be able to use the same method.  
+         */
+
 
         [Test]
         public void WhenGivenTwoIntegers_Subtract_ReturnsCorrectAnswer()

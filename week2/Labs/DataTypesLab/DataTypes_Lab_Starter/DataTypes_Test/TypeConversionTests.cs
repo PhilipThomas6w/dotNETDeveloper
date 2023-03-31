@@ -9,7 +9,7 @@ namespace DataTypes_Test
         [TestCase(88u, 88)]
         [TestCase(0u, 0)]
         [TestCase(32_767u, 32_767)]
-        public void WhenGivenAValidUInt_UIntToShort_ReturnsAShort(uint before, short expAfter)
+        public void WhenGivenAValidUInt_UIntToShort_ReturnsAShort(uint before, short expAfter) 
         {
             var after = TypeConversion.UIntToShort(before);
             Assert.That(after, Is.InstanceOf<short>());
@@ -35,7 +35,7 @@ namespace DataTypes_Test
 
         [TestCase(-100_000.678f, -100_001L)]
         [TestCase(100_000.678f, 100_001L)]
-        public void WhenGivenANonItegralFloat_FloatToLong_ReturnsARoundedLong(float before, long expAfter)
+        public void WhenGivenANonIntegralFloat_FloatToLong_ReturnsARoundedLong(float before, long expAfter)
         {
             var after = TypeConversion.FloatToLong(before);
             Assert.That(after, Is.InstanceOf<long>());
