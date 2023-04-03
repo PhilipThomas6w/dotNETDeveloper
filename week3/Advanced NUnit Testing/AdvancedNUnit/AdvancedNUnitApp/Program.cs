@@ -1,2 +1,24 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace AdvancedNUnitApp;
+
+public class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Test");
+    }
+}
+
+public class Calculator
+{
+    public double Num1 { get; set; }
+    public double Num2 { get; set; }
+    public double Add()
+    {
+        return Num1 + Num2;
+    }
+
+    public bool IsDivisible()
+    {
+        return Num1 % Num2 == 0;
+    }
+}
