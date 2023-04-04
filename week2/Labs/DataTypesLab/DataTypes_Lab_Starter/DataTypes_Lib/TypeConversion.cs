@@ -16,7 +16,7 @@ namespace DataTypes_Lib
 
         public static long FloatToLong(float num)
         {
-            return (long)Math.Round(num);  // Not sure why Math.Floor didn't work here...
+            return (long)Math.Round(num);
         }
     }
 }

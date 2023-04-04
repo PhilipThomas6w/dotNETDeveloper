@@ -22,7 +22,7 @@ namespace MoreTypes_Tests
         {
             var result = StringExercises.Address(number, street, city, postcode);
             Assert.That(result, Is.EqualTo(expAddress));
-        }
+        } 
         [TestCase(33, 40, "You got 33 out of 40: 82.5%")]
         [TestCase(18, 65, "You got 18 out of 65: 27.7%")]
         public void GivenATestScore_Scorer_ReturnsAFormattedString(int score, int outOf, string expString)

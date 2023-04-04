@@ -4,8 +4,8 @@ public class Program
 {
     static void Main()
     {
-        int timeOfDay = DateTime.Now.Hour;
-        Console.WriteLine(GetMessage(timeOfDay));
+        int inputFromDateTimeStruct = DateTime.Now.Hour;
+        Console.WriteLine(GetMessage(inputFromDateTimeStruct));
     }
 
     public static string GetMessage(int timeOfDay)
