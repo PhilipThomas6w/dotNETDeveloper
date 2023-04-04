@@ -62,7 +62,9 @@ public class CalculatorTests
     public void TestArrayOfStrings()
     {
         var fruit = new List<string> { "apple", "pear", "banana", "peach" };
-        Assert.That(fruit, Does.Contain("pear")); Assert.That(fruit, Has.Count.EqualTo(4)); Assert.That(fruit, Has.Exactly(2).StartsWith("pea"));
+        Assert.That(fruit, Does.Contain("pear")); 
+        Assert.That(fruit, Has.Count.EqualTo(4)); 
+        Assert.That(fruit, Has.Exactly(2).StartsWith("pea"));
     }
 
 }

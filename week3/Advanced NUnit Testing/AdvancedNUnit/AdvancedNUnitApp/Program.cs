@@ -1,4 +1,6 @@
-﻿namespace AdvancedNUnitApp;
+﻿using System.Diagnostics.Metrics;
+
+namespace AdvancedNUnitApp;
 
 public class Program
 {
@@ -22,3 +24,14 @@ public class Calculator
         return Num1 % Num2 == 0;
     }
 }
+public class Counter
+{
+    public int Count { get; private set; }
+    public Counter(int start) { Count = start; }
+    public void Increment() { Count++; }
+    public void Decrement() { Count--; }
+}
+
+
+
+
