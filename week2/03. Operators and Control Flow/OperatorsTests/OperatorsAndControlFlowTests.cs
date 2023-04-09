@@ -7,19 +7,19 @@ namespace OperatorsAndControlFlowTests
     {
         #region LOOP TESTS
 
-        [TestCase(new int[] { 10, 6, 22, -17, 3 }, 22)]
+        [TestCase(new int[] { 10, 6, 22, -17, 3 }, 22)]  // [TestCase] attribute won't take a list of integers as a parameter, but it will take an integer array.
         [TestCase(new int[] { 5, 19, 43, 117, -7 }, 117)]
         [TestCase(new int[] { -3, -54, -67, -5, -18 }, -3)]
-        public void GivenIntArray_HighestForLoop_ReturnsHighestNumInArray(int[] numArray, int expectedResult)
+        public void GivenIntArray_HighestForLoop_ReturnsHighestNumInArray(int[] numArray, int expectedResult) 
         {
             // Arrange
-            List<int> nums = numArray.ToList();
+            List<int> nums = numArray.ToList();  // This converts the integer array that has been passed into this method body into a list that can be passed to my HighestForLoop method.
 
             // Act
-            int highestNum = Loops.Loops.HighestDoWhileLoop(nums);
+            int highestNum = Loops.HighestForLoop(nums); // This passes the nums list to the HighestForLoop method and stores the return value in a variable called highestNum.
 
             // Assert
-            Assert.That(highestNum, Is.EqualTo(expectedResult));
+            Assert.That(highestNum, Is.EqualTo(expectedResult));  // This compares the value of highestNum to the value of expectedResult (second parameter in my TestCase).
         }
 
         [TestCase(new int[] { 10, 6, 22, -17, 3 }, 22)]
@@ -31,7 +31,7 @@ namespace OperatorsAndControlFlowTests
             List<int> nums = numArray.ToList();
 
             // Act
-            int highestNum = Loops.Loops.HighestForEachLoop(nums);
+            int highestNum = Loops.HighestForEachLoop(nums);
 
             // Assert
             Assert.That(highestNum, Is.EqualTo(expectedResult));
@@ -46,7 +46,7 @@ namespace OperatorsAndControlFlowTests
             List<int> nums = numArray.ToList();
 
             // Act
-            int highestNum = Loops.Loops.HighestWhileLoop(nums);
+            int highestNum = Loops.HighestWhileLoop(nums);
 
             // Assert
             Assert.That(highestNum, Is.EqualTo(expectedResult));
@@ -61,7 +61,7 @@ namespace OperatorsAndControlFlowTests
             List<int> nums = numArray.ToList();
 
             // Act
-            int highestNum = Loops.Loops.HighestDoWhileLoop(nums);
+            int highestNum = Loops.HighestDoWhileLoop(nums);
 
             // Assert
             Assert.That(highestNum, Is.EqualTo(expectedResult));

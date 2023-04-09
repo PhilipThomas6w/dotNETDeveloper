@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopExamples", "LoopExample
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperatorsAndControlFlowTests", "OperatorsTests\OperatorsAndControlFlowTests.csproj", "{C4757D35-4946-47F0-9DBB-D00CAF3CCD28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionTests", "ExceptionTests\ExceptionTests.csproj", "{C5B9DC86-13E4-4468-8F3B-49048ED0F69C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C4757D35-4946-47F0-9DBB-D00CAF3CCD28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4757D35-4946-47F0-9DBB-D00CAF3CCD28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4757D35-4946-47F0-9DBB-D00CAF3CCD28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5B9DC86-13E4-4468-8F3B-49048ED0F69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5B9DC86-13E4-4468-8F3B-49048ED0F69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5B9DC86-13E4-4468-8F3B-49048ED0F69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5B9DC86-13E4-4468-8F3B-49048ED0F69C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

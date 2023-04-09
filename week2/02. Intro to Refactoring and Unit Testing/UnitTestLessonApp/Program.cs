@@ -10,6 +10,11 @@ public class Program
 
     public static string GetMessage(int timeOfDay)
     {
+        if (timeOfDay <0 || timeOfDay > 24)
+        {
+            throw new ArgumentOutOfRangeException();
+        }
+
         if (timeOfDay < 5)
         {
             return "Good evening!";

@@ -21,8 +21,6 @@ public class Tests
         Assert.That(actualMessage, Is.EqualTo(expectedMessage));
     }
     
-    
-    
     // [TestCase] method
     // [TestCase(timeOfDay, expectedMessage)]
 
@@ -31,7 +29,7 @@ public class Tests
     [TestCase(12, "Good afternoon!")]
     [TestCase(21, "Good evening!")]
 
-    public void Given13_GetMessage_ReturnsGoodAfternoon(int timeOfDay, string expectedMessage)
+    public void GivenTime_GetMessage_ReturnsGreeting(int timeOfDay, string expectedMessage)
     {
         // Arrange
         
@@ -41,5 +39,16 @@ public class Tests
         // Assert
         Assert.That(expectedMessage, Is.EqualTo(actualMessage));
        
+    }
+}
+
+public class ExceptionTests
+{
+    [TestCase(-3)]
+    [TestCase(30)]
+    public void GivenInvalidHour_GetMessage_ReturnsArgumentOutOfRangeException(int timeOfDay)
+    {
+        // Assert
+        Assert.That(() => Program.GetMessage(timeOfDay), Throws.TypeOf<ArgumentOutOfRangeException>());
     }
 }
