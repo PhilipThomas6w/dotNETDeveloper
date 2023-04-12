@@ -6,7 +6,8 @@ public class Program
 {
     static void Main()
     {
-        Console.WriteLine("Test");
+        var subject = new Calculator();
+        Console.WriteLine(subject.ToString());
     }
 }
 

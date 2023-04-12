@@ -23,16 +23,14 @@ public class CounterTests
     public void Increment_IncreasesCountByOne()
     {
         // arrange
-
+        Init();
         int result = 7;
 
         // act
-
         _sut.Increment();
 
 
         // assert
-
         Assert.That(_sut.Count, Is.EqualTo(result));
 
     }
@@ -42,16 +40,14 @@ public class CounterTests
     public void Decrement_DecreasesCountByOne()
     {
         // arrange
-
+        Init();
         int result = 5;
 
         // act
-
         _sut.Decrement();
 
 
         // assert
-
         Assert.That(_sut.Count, Is.EqualTo(result));
     }
 }
