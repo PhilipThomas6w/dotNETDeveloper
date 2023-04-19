@@ -46,44 +46,56 @@ public class Program
 
         #region DEMO: try-catch block
 
-        // A program that takes in user text input, a score, and tells them their grade
-
-        //Console.WriteLine("Enter your percentage mark: ");
-        //int percentageAsInt = Int32.Parse(Console.ReadLine());
+        // A program that takes in a score from a user input and prints a corresponding grade to the console.
 
         string grade = "";
         bool validInput = false;
+        int percentageScore;
         do
         {
             try
             {
-                Console.WriteLine("Enter your percentage mark: ");
-                int percentageAsInt = Int32.Parse(Console.ReadLine()); 
-                grade = GetGrade(percentageAsInt);
-                validInput = true;
+                Console.WriteLine("Enter your percentage score: ");
+                string input = Console.ReadLine();
+
+                // Check if input is an empty string
+                if (string.IsNullOrEmpty(input))
+                {
+                    Console.Write("Invalid Input. Please enter a value between 0 and 100. ");
+                    validInput = false;
+                }
+                // Parse the input as an integer
+                else if (int.TryParse(input, out percentageScore))
+                {
+                    grade = GetGrade(percentageScore);
+                    validInput = true;
+                }
+                else
+                {
+                    Console.Write("Invalid input. Please enter a value between 0 and 100. ");
+                    validInput = false;
+                }
             }
-            catch (ArgumentOutOfRangeException e)
+            catch (ArgumentOutOfRangeException)
             {
-                Console.WriteLine("Percentage must be between 0 and 100.");
+                Console.Write("Invalid input. Please enter a value between 0 and 100. ");
                 validInput = false;
             }
-        } while (!validInput);
+
+        } while (!validInput);  // while validInput is false, iterate through the instructions in the try-catch blocks.
 
         Console.WriteLine(grade);
-       
-
 
         #endregion
-
     }
 
-    public static string GetGrade(int percentage)
+    public static string GetGrade(int scoreAsPercentage)
     {
         // If the data is invalid, then throw new exception
 
-        if (percentage < 0 || percentage > 100) throw new ArgumentOutOfRangeException("Percentage must be between 0 and 100.");
+        if (scoreAsPercentage < 0 || scoreAsPercentage > 100) throw new ArgumentOutOfRangeException("Percentage must be between 0 and 100.");
 
-        string grade = percentage >= 65 ? (percentage >= 85 ? "You passed with distinction!" : "You passed.") : "You failed.";
+        string grade = scoreAsPercentage >= 65 ? (scoreAsPercentage >= 85 ? "You passed with distinction!" : "You passed.") : "You failed.";
         return grade;
     }
 

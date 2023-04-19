@@ -19,8 +19,8 @@ public class Address
     public string Street { get; set; }
     public string Town { get; set; }
 
-    public string GetAddressString()
+    public string GetAddress()
     {
-        return $"Address: {_houseNo} {_street}, {_town}";
+        return $"{HouseNo} {Street}, {Town}";
     }
 }

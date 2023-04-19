@@ -1,4 +1,8 @@
-﻿namespace ClassesApp
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ClassesApp
 {
     // model answer for Inheritance exercise
     public class Vehicle 

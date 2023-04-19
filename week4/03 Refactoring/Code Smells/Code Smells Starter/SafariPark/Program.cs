@@ -18,6 +18,7 @@ namespace ClassesApp
         {
             Person p = new Person("Katie", "King");
             Hunter h = new Hunter("Marion", "Jones", new Camera("Leica")) { Age = 32 };
+            
 
             Console.WriteLine();
             var theWeapons = new List<IShootable>();

@@ -58,15 +58,8 @@
   <Class Name="ClassesApp.Person" Collapsed="true">
     <Position X="4" Y="0.5" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAIAAAAAEAEEAAAAAAAAAAAgIAAAAAEAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAIAAAAAEAEEAAAAAAAAAAAgIAAQAACAAAAE=</HashCode>
       <FileName>Person.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ClassesApp.Address" Collapsed="true">
-    <Position X="7.5" Y="4.75" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAFAAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>Address.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="ClassesApp.IMovable">

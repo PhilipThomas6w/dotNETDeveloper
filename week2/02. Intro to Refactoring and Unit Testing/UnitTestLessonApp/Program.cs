@@ -27,10 +27,10 @@ public class Program
         {
             return "Good afternoon!";
         }
-        else
-        {
-            return "Good evening!";
-        }
+        //else
+        //{
+        //    return "Good evening!";
+        //}
     }
 }
 
