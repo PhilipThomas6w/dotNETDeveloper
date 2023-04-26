@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace EntityFramework;
+namespace EntityFrameworkWithLambdaExpressions;
 
 public partial class NorthwindContext : DbContext
 {

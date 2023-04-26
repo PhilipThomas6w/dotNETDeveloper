@@ -26,16 +26,16 @@ public class Program
 
             // UPDATE
 
-            var selectedCustomer = db.Customers.Find("SPARP");
+            //var selectedCustomer = db.Customers.Find("SPARP");
 
-            selectedCustomer.City = "Birmingham";
+            //selectedCustomer.City = "Birmingham";
 
-            db.SaveChanges();
+            //db.SaveChanges();
 
-            selectedCustomer = db.Customers.Find("SPARP");
-            Console.WriteLine(selectedCustomer.City);
+            //selectedCustomer = db.Customers.Find("SPARP");
+            //Console.WriteLine(selectedCustomer.City);
 
-            // DELETE
+            //// DELETE
 
             var customerToDelete = db.Customers.Find("SPARP");
             db.Customers.Remove(customerToDelete);
