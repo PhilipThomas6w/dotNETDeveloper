@@ -1,0 +1,17 @@
+<Daily_Meal_Plan>
+    <Breakfast>
+        <name>Scambled Egg with Toast</name>
+        <description>Two lightly scrambled eggs with one slice of wholemeal toast</description>
+        <calories>300</calories>
+    </Breakfast>
+    <Lunch>
+        <name>Chicken Salad Wrap</name>
+        <description>A wrap filled with chicken breast, lettuce, and tomato</description>
+        <calories>500</calories>
+    </Lunch>
+    <Dinner>
+        <name>Thai Green Curry</name>
+        <description>Chicken Thai Green Curry with coconut rice</description>
+        <calories>600</calories>
+    </food>
+</Daily_Meal_Plan>

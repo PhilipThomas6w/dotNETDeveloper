@@ -1,0 +1,19 @@
+{
+   "Daily_Meal_Plan":{
+      "Breakfast":{
+         "name":"Scambled Egg with Toast",
+         "description":"Two lightly scrambled eggs with one slice of wholemeal toast",
+         "calories":"300"
+      },
+      "Lunch":{
+         "name":"Chicken Salad Wrap",
+         "description":"A wrap filled with chicken breast, lettuce, and tomato",
+         "calories":"500"
+      },
+      "Dinner":{
+         "name":"Thai Green Curry",
+         "description":"Chicken Thai Green Curry with coconut rice",
+         "calories":"600"
+      }
+   }
+}
