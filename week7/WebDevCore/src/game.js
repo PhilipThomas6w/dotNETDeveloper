@@ -30,7 +30,7 @@ function setup() {
   let resetButton = document.createElement("button");
   resetButton.id = "reset-button";
   resetButton.innerHTML = "New Game";
-  resetButton.addEventListener("click", resetGame);
+  resetButton.addEventListener("click", resetGame); // will call resetGame if reset button is clicked
 
   document.getElementById("game-container").appendChild(resetButton);
 
