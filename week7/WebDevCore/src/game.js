@@ -30,7 +30,7 @@ function setup() {
   let resetButton = document.createElement("button");
   resetButton.id = "reset-button";
   resetButton.innerHTML = "New Game";
-  resetButton.addEventListener("click", resetGame); // will call resetGame if reset button is clicked
+  resetButton.addEventListener("click", resetGame); // will call resetGame() if reset button is clicked
 
   document.getElementById("game-container").appendChild(resetButton);
 
@@ -53,7 +53,7 @@ function draw() {
 }
 
 function youWin() {
-  noLoop(); // stops automatic execution of draw()
+  noLoop(); // stops continuous execution of draw()
 
   let para = document.createElement("p");
   para.id = "win-message";
@@ -90,7 +90,7 @@ function resetGame() {
   let canvas = createCanvas(640, 480);
   canvas.parent("game-container");
 
-  loop();
+  loop(); //restarts continuous execution of draw()
 }
 
 function hideResetButton() {
