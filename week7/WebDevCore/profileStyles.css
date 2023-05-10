@@ -1,192 +1,191 @@
 /* Global Styles */
 body {
-    font-family: "Montserrat", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #2D3142; /* Update background colour */
-    color: white; /* Set text colour to white */
-  }
-  
-  /* CSS for the navbar */
-  nav {
-    background-color: #f5f5f5;
-    padding: 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  nav a {
-    text-decoration: none;
-    margin: 0 10px;
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #333;
-    background-color: #bfc0c0; /* Add background colour on hover */
-    border-radius: 5px; /* Add rounded corners on hover */
-    padding: 5px 10px; /* Adjust padding on hover */
-  }
-  
-  /* CSS for the search bar */
-  .search-bar {
-    margin-left: auto; /* Move the search bar to the right */
-  }
-  
-  .search-bar label {
-    margin-right: 5px; /* Add spacing between label and input */
-  }
-  
-  
-  
-  h1, h2, h3 {
-    display: inline-block;
-    padding: 10px;
-    background-color: #4f5d75; /* Update background colour of box around headers */
-    color: white;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: 700;
-    border-radius: 10px;
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  p, ul, ol {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: 400;
-    color: white; /* Set text colour to white */
-  }
-  
-  footer {
-    background-color: #f5f5f5;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  /* Flexbox */
-  .flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .flex-item {
-    flex-basis: 30%;
-    padding: 20px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .flex-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    border-radius: 15px; /* Add border-radius to round the edges */
-  }
-  
-  .highlighted {
-    border: 2px solid #f00;
-  }
-  
-  /* Flexbox for portfolio and mission */
-  
-  .section-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .section-container section {
-    margin-bottom: 30px;
-  }
-  
-  /* CSS for Skills list */
-  
-  .skills-list {
-    list-style: none;
-    padding: 0;
-    columns: 2;
-    column-gap: 0px;
-    text-align: center;
-    margin: 0 auto;
-  }
-  
-  .skills-list h3 {
-    text-align: center;
-  }
-  
-  .skills-list li {
-    margin-bottom: 10px;
-  }
-  
-  .rating {
-    color: #FFD700;
-    font-size: 20px;
-    display: inline-block;
-  }
-  
-  /* CSS for Interests list */
-  
-  .interests-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .interests-list li {
-    margin-bottom: 10px;
-  }
-  
-  footer {
-    color: #333; 
-    background-color: #f5f5f5;
-    padding: 10px;
-    text-align: center;
-    position: fixed; /* Position the footer as fixed */
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
+  font-family: "Montserrat", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2d3142;
+  color: white; /* sets text colour */
+}
 
-  /* projects.html CSS */
-  
+/* CSS for navbar */
+nav {
+  background-color: #f5f5f5;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-  }
-  
-  th,
-  td {
-    padding: 10px;
-    border-bottom: 1px solid #bfc0c0; /* Add border bottom for table rows */
-  }
-  
-  thead th {
-    background-color: #2d3142; 
-    color: #fff; /* Update text color */
-  }
-  
-  tbody td:nth-child(3) {
-    font-weight: bold; /* Highlight the year column */
-  }
-  
-  .table-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #333;
+  background-color: #bfc0c0; /* background colour on hover */
+  border-radius: 5px; /* rounded corners on hover */
+  padding: 5px 10px; /* Adjusts padding on hover */
+}
+
+/* CSS for search bar */
+.search-bar {
+  margin-left: auto; /* Moves the search bar to the right */
+}
+
+.search-bar label {
+  margin-right: 5px; /* Adds spacing between label and input */
+}
+
+h1,
+h2,
+h3 {
+  display: inline-block;
+  padding: 10px;
+  background-color: #4f5d75; /* Sets background colour of box around headers */
+  color: white;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+p,
+ul,
+ol {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+  color: white; /* Sets text colour to white */
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Flexbox */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex-basis: 30%;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 15px; /* rounds the edges */
+}
+
+.highlighted {
+  border: 2px solid #f00;
+}
+
+/* Flexbox for portfolio and mission */
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section-container section {
+  margin-bottom: 30px;
+}
+
+/* CSS for Skills list */
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+  column-gap: 0px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.skills-list h3 {
+  text-align: center;
+}
+
+.skills-list li {
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: #ffd700;
+  font-size: 20px;
+  display: inline-block;
+}
+
+/* CSS for Interests list */
+
+.interests-list {
+  list-style: none;
+  padding: 0;
+}
+
+.interests-list li {
+  margin-bottom: 10px;
+}
+
+footer {
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+  position: fixed; /* Position the footer as fixed so it doesn't move */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* projects.html CSS */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #bfc0c0;
+}
+
+thead th {
+  background-color: #2d3142;
+  color: #fff;
+}
+
+tbody td:nth-child(3) {
+  font-weight: bold;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
