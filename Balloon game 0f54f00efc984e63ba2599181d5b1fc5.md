@@ -1,3 +1,8 @@
+# Balloon game
+
+Code for game.js
+
+```jsx
 var title = "Burst My Bubble";
 let developer = "Philip Luke Thomas";
 
@@ -27,17 +32,16 @@ function setup() {
   }
 
   // Add reset button
-  let resetButton = document.createElement("button"); // creates a button html element
-  resetButton.id = "reset-button"; // gives it id="reset-button"
-  resetButton.innerHTML = "New Game"; // inserts "New Game" text in button
-  resetButton.addEventListener("click", resetGame); // will call resetGame() function if reset button is clicked
+  let resetButton = document.createElement("button");
+  resetButton.id = "reset-button";
+  resetButton.innerHTML = "New Game";
+  resetButton.addEventListener("click", resetGame); // will call resetGame if reset button is clicked
 
-  document.getElementById("game-container").appendChild(resetButton); // appends the button to the game-container
+  document.getElementById("game-container").appendChild(resetButton);
 
-  hideResetButton(); // calls the hideResetButton() function, so we don't see it after initial set-up
+  hideResetButton();
 }
 
-// draw continuously executes unless noLoop() is called
 function draw() {
   background(135, 206, 235);
 
@@ -54,10 +58,10 @@ function draw() {
 }
 
 function youWin() {
-  noLoop(); // stops continuous execution of draw()
+  noLoop(); // stops automatic execution of draw()
 
-  let para = document.createElement("p"); // creates a new <p> element and assigns it to para
-  para.id = "win-message"; // assigns id = "win-message" to para, such that <p id="win-message"></p>
+  let para = document.createElement("p");
+  para.id = "win-message";
   para.style.fontSize = "64px";
   let textNode = document.createTextNode("You win!");
   para.appendChild(textNode);
@@ -91,7 +95,7 @@ function resetGame() {
   let canvas = createCanvas(640, 480);
   canvas.parent("game-container");
 
-  loop(); //restarts continuous execution of draw()
+  loop();
 }
 
 function hideResetButton() {
@@ -105,3 +109,4 @@ function removeWinMessage() {
     winMessage.remove();
   }
 }
+```
