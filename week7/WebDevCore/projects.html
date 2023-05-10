@@ -24,6 +24,14 @@
     ></script>
     <script src="src/balloon.js" defer></script>
     <script src="src/game.js" defer></script>
+    <style>
+      #game-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
   </head>
 
   <body>
@@ -73,9 +81,10 @@
       </div>
     </section>
 
-    <section class="section-container" id="game-container">
+    <section class="section-container">
       <h2 id="game-title">Burst My Bubble</h2>
       <p>Score: <span id="score">0</span></p>
+      <div id="game-container"></div>
     </section>
 
     <footer>
