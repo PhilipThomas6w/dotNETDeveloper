@@ -1,0 +1,97 @@
+﻿@model IEnumerable<SpartaToDo.App.Models.ViewModels.ToDoVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-controller="ToDoItems" asp-action="Index" method="get">
+    <p>
+        <label for="filter">Filter by: </label>
+        <input type="text" id="filter" name="filter" />
+        <button type="submit">Filter</button>
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Complete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <form asp-action="UpdateTodoComplete" asp-route-id="@item.Id">
+                        @Html.CheckBox("Complete", item.Complete, new {onChange="this.form.submit()"})
+                    </form>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCreated)
+                </td>
+                <td class="btn-group-vertical">
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                    <a class="btn btn-danger">
+                        @using (Html.BeginForm("Delete", "ToDoItems", new { id = item.Id }))
+                        {
+                            <input type="submit" class="bg-transparent border-0" value="Delete" onclick="return confirm('Are you sure you wish to delete the To Do Item @item.Title?')" />
+                        }
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Status', 'Number'],
+                ['Complete', @Model.Where(x => x.Complete).Count()],
+                ['Incomplete', @Model.Where(x => !x.Complete).Count()]
+            ]);
+
+            var options = {
+                title: 'To Do Completion',
+                pieHole: 0.4,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+            chart.draw(data, options);
+        }
+    </script>
+</div>
+<div>
+    <div id="donutchart" style="width: 900px; height: 500px;"></div>
+</div>
