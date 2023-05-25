@@ -4,21 +4,24 @@ Welcome to the repository for my C# Developer exercises! This repository contain
 
 ## Table of Contents
 
-- [Week 1: Business Week - Interview Skills, Powershell, Markdown, Source Control](week1/)
-- [Week 2: Introduction to C# and Unit Testing](Week2/)
-- [Week 3: Advanced NUnit Testing and Object Oriented Programming](week3/)
-- [Week 4: Advanced C# and SQL](week4/)
-- [Week 5: Database Programming with Microsoft SQL](week5/)
-- [Week 6: Web Development with ASP.NET Core](week6/)
-- [Week 7: Web Services and API Development with ASP.NET Core](week7/)
-- [Week 8: Final Project](week8/)
+- [Week 1: Powershell, Markdown, version control, Agile and Scrum](week1/)
+- [Week 2: C# fundamentals, unit testing, refactoring, exceptions, memory model](Week2/)
+- [Week 3: Week 3: NUnit, Test Driven Development, OOP, SOLID principles](week3/)
+- [Week 4: Algorithms, Big O, codesmells, design patterns, collaborative Git](week4/)
+- [Week 5: Databases, SQL fundamentals](week5/)
+- [Week 6: Entity Framework, LINQ, Method and Query Syntax, Lambda Expressions, asynchronous methods, serialisation](week6/)
+- [Week 7: REST API Fundamentals, ASP.NET Core API, service layer implementation, dependency injection, test doubles, Moq](week7/)
+- [Week 8: Frontend Development: HTML, CSS, Bootstrap; ASP.NET Core MVC](week8/)
+- [Week 9: Advanced ASP.NET Core MVC: Razor Pages, logging, authentication, and authorization](week9/)
+- [Week 10: ASP.NET Core Web App project](week10/)
+
 
 ## Getting Started
 
 To get started with this project, simply clone this repository to your local machine:
 
 ```bash
-git clone <https://github.com/philipthomas6w/tech211.git>
+git clone <https://github.com/philipthomas6w/dotNETDeveloper.git>
 ```
 
 ## Prerequisites
@@ -42,8 +45,8 @@ Each week's exercises are located in their respective directories within this re
 
 ## Authors
 
-- Philip Thomas
+- Philip Luke Thomas
 
 ## Acknowledgments
 
-- I would like to thank my instructor Peter Bellaby for his guidance and support throughout this training course, the HR staff at Sparta Global for their help and encouragement, and my fellow trainees.
+- I would like to thank my instructor Peter Bellaby for his guidance and support throughout this training course, as well as my fellow trainees.
