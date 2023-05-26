@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Azure;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SpartaToDo.App.Data;
 using SpartaToDo.App.Models;
@@ -11,10 +12,12 @@ namespace SpartaToDo.App.Services
     {
         private readonly SpartaToDoContext _context;
         private readonly IMapper _mapper;
-        public ToDoService(SpartaToDoContext context, IMapper mapper)
+        private readonly UserManager<Spartan> _userManager;
+        public ToDoService(SpartaToDoContext context, IMapper mapper, UserManager<Spartan> userManager)
         {
             _context = context;
             _mapper = mapper;
+            _userManager = userManager;
         }
 
         public async Task<ServiceResponse<ToDoVM>> CreateToDoAsync(CreateToDoVM createTodoVM)
@@ -107,9 +110,17 @@ namespace SpartaToDo.App.Services
         }
 
 
-        public async Task<ServiceResponse<IEnumerable<ToDoVM>>> GetToDoItemsAsync(string? filter = null)
+        public async Task<ServiceResponse<IEnumerable<ToDoVM>>> GetToDoItemsAsync(Spartan spartan, string? filter = null)
         {
             var response = new ServiceResponse<IEnumerable<ToDoVM>>();
+
+            if (spartan == null)
+            {
+                response.Success = false;
+                response.Message = "Can't find Spartan";
+                return response;
+            }
+
 
             if (_context.ToDoItems == null)
             {
@@ -137,6 +148,29 @@ namespace SpartaToDo.App.Services
         public bool ToDoExists(int id)
         {
             return (_context.ToDoItems?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        public async Task<string> GetSpartanOwnerAsync(int? id)
+        {
+            return await _context.ToDoItems.Where(td => td.Id == id).Select(td => td.SpartanId).FirstAsync();
+        }
+
+        public async Task<ServiceResponse<Spartan>> GetUserAsync(HttpContext httpContext)
+        {
+            var response = new ServiceResponse<Spartan>();
+
+
+            var currentUser = await _userManager.GetUserAsync(httpContext.User);
+
+            if (currentUser == null)
+            {
+                response.Success = false;
+                response.Message = "Could not find Spartan";
+                return response;
+            }
+
+            response.Data = currentUser;
+            return response;
         }
 
         public async Task<ServiceResponse<ToDoVM>> UpdateToDoCompleteAsync(int id, MarkCompleteVM markCompleteVM)

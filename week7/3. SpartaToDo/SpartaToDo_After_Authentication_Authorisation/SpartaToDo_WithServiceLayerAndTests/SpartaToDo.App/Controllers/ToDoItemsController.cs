@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SpartaToDo.App.Models;
 using SpartaToDo.App.Models.ViewModels;
 using SpartaToDo.App.Services;
 
@@ -17,7 +18,9 @@ namespace SpartaToDo.App.Controllers
 
         public async Task<IActionResult> Index(string? filter = null)
         {
-            var response = await _service.GetToDoItemsAsync(filter);
+            var user = await _service.GetUserAsync(HttpContext);
+            
+            var response = await _service.GetToDoItemsAsync(user.Data, filter);
             return response.Success ? View(response.Data) : Problem(response.Message);
         }
 

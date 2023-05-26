@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Philip Luke Thomas" />
-    <meta name="description" content="Personal Profile" />
-    <meta
-      name="keywords"
-      content="portfolio, profile, sparta global, philip, luke, thomas"
+    <meta charset="utf-8" />
+    <title>Profile</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
     />
-
-    <title>Philip Luke Thomas</title>
-
     <!-- link to stylesheet -->
     <link href="profileStyles.css" rel="stylesheet" />
     <!-- link to Google Font -->
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <!-- link to p5 library -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"
+      defer
+    ></script>
   </head>
   <body>
     <nav>
@@ -30,90 +33,61 @@
         target="_blank"
         >LinkedIn</a
       >
-      <form action="https://www.google.com/search" class="search-bar">
-        <label for="search">Search</label>
-        <input type="text" id="search" name="q" />
-        <input type="submit" value="Search" />
-      </form>
     </nav>
 
     <div class="section-container">
       <section>
-        <h2>Philip (Luke) Thomas</h2>
-        <p>
-          Welcome to my personal portfolio, where you can learn a little more
-          about what makes me, <em>me</em>.
-        </p>
+        <h1>Philip (Luke) Thomas</h1>
       </section>
     </div>
 
-    <div class="flex-container">
-      <div class="flex-item">
-        <img src="./images/travel.jpg" alt="Image 1" width="300px" />
-      </div>
-      <div class="flex-item">
-        <img
-          src="./images/philiplukethomas.png"
-          alt="My profile pic"
-          width="300px"
-        />
-      </div>
-      <div class="flex-item">
-        <img src="./images/bjj.jpg" alt="Image 2" width="300px" />
-      </div>
+    <div class="image-gallery">
+      <img src="./images/travel.jpg" alt="Image 1" />
+      <img src="./images/philiplukethomas.png" alt="Image 2" />
+      <img src="./images/bjj.jpg" alt="Image 3" />
     </div>
 
     <div class="section-container">
-      <section>
-        <h3>Mission</h3>
-        <p>
-          As a junior software developer with a strong background in mechanical
-          engineering and project management, I approach my work with a focus on
-          the end goal. By taking advantage of my diverse skillset, I strive to
-          create innovative solutions that not only meet immediate needs but
-          also have long-term benefits.
-        </p>
-        <p>
-          My passion for personal growth and serving others drives me to
-          constantly seek out new tools and methods to enhance my abilities and
-          empower those around me. I’m committed to continuous learning and
-          development, and I believe that by elevating myself, I can better
-          support and inspire those around me to reach their full potential.
-        </p>
-        <p>
-          Living and working in many different parts of the world, including in
-          West Africa, the Middle East, the US, and Southeast Asia has allowed
-          me to gain valuable insights from various cultures. Those experiences
-          have helped to shape me into a versatile individual; one capable of
-          adapting to different environments and collaborating effectively with
-          people from diverse backgrounds.
-        </p>
+      <section class="mission-section">
+        <h2>Mission</h2>
+        <div class="mission-content">
+          <p>
+            As a junior software developer with a strong background in
+            mechanical engineering and project management, I approach everything
+            I do with a focus on the end goal. By taking advantage of my diverse
+            skillset, I try to create innovative solutions that not only meet
+            immediate needs but also have long-term benefits.
+          </p>
+          <p>
+            My passion for personal growth and serving others is what drives me
+            to constantly seek out new tools and methods to enhance my abilities
+            and empower those around me. I’m committed to continuous learning
+            and development, and I believe that by elevating myself, I can
+            better support and inspire those around me to reach their full
+            potential.
+          </p>
+          <p>
+            I've lived and worked in many different parts of the world,
+            including in West Africa, the Middle East, the US, and Southeast
+            Asia, and this has given me really valuable insights into different
+            cultures and traditions. Those experiences have helped to shape me
+            into a versatile individual; someone who is capable of quickly
+            adapting to new environments and who can collaborate effectively
+            with a wide variety of people.
+          </p>
+        </div>
       </section>
     </div>
 
     <section>
       <div class="section-container">
-        <h3>Skills</h3>
+        <h2>Languages</h2>
         <ul class="skills-list">
-          <li>Waterfall <span class="rating">★★★★</span></li>
-          <li>Agile/Scrum <span class="rating">★★★</span></li>
-          <li>Mechanical Engineering <span class="rating">★★★★</span></li>
-          <li>ISO 9000 <span class="rating">★★★</span></li>
-          <li>Product design <span class="rating">★★★</span></li>
-          <li>Networks <span class="rating">★★★</span></li>
-          <li>Contract management <span class="rating">★★★★</span></li>
-          <li>Contract negotiation <span class="rating">★★★</span></li>
-          <li>Control systems <span class="rating">★★</span></li>
-          <li>Linux <span class="rating">★★★</span></li>
-          <li>Jira <span class="rating">★★★</span></li>
-          <li>Microsoft Azure <span class="rating">★★</span></li>
-          <li>AWS <span class="rating">★★</span></li>
           <li>C# <span class="rating">★★★</span></li>
           <li>Python <span class="rating">★★★</span></li>
           <li>JavaScript <span class="rating">★★</span></li>
-          <li>HTML/CSS <span class="rating">★★★</span></li>
-          <li>Version control <span class="rating">★★★</span></li>
-          <li>CI/CD <span class="rating">★★</span></li>
+          <li>HTML <span class="rating">★★★</span></li>
+          <li>CSS <span class="rating">★★★</span></li>
           <li>SQL <span class="rating">★★★</span></li>
         </ul>
       </div>
@@ -121,7 +95,52 @@
 
     <section>
       <div class="section-container">
-        <h3>Interests</h3>
+        <h2>Competencies</h2>
+        <ul class="skills-list">
+          <li>Waterfall <span class="rating">★★★★</span></li>
+          <li>Agile/Scrum <span class="rating">★★★</span></li>
+          <li>Jira <span class="rating">★★</span></li>
+          <li>Visual Studio <span class="rating">★★★</span></li>
+          <li>Visual Studio Code <span class="rating">★★★</span></li>
+          <li>Test Driven Development <span class="rating">★★★</span></li>
+          <li>Test First Development <span class="rating">★★</span></li>
+          <li>Postman <span class="rating">★★</span></li>
+          <li>Git/GitHub <span class="rating">★★★</span></li>
+          <li>Microsoft Azure <span class="rating">★★</span></li>
+          <li>Docker <span class="rating">★★</span></li>
+          <li>Jenkins <span class="rating">★★</span></li>
+          <li>Linux <span class="rating">★★★</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-container">
+        <h2>Frameworks</h2>
+        <ul class="skills-list">
+          <li>ASP.NET Core <span class="rating">★★</span></li>
+          <li>Entity Framework <span class="rating">★★</span></li>
+          <li>NUnit <span class="rating">★★</span></li>
+          <li>Moq <span class="rating">★★</span></li>
+          <li>Django <span class="rating">★★</span></li>
+          <li>Flask <span class="rating">★★</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-container">
+        <h2>Certificates</h2>
+        <ul class="interests-list">
+          <li>Prince2 Foundation</li>
+          <li>Microsoft Azure AZ-900</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-container">
+        <h2>Interests</h2>
         <ul class="interests-list">
           <li>Computer Science</li>
           <li>Theology</li>
@@ -139,7 +158,7 @@
     </section>
 
     <footer>
-      <small> &copy; SixWings <cite>by Philip Luke Thomas</cite></small>
+      <small> &copy; Philip Luke Thomas 2023</small>
     </footer>
   </body>
 </html>

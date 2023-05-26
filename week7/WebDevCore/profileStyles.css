@@ -1,10 +1,10 @@
 /* Global Styles */
 body {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #2d3142;
-  color: white; /* sets text colour */
+  color: white;
 }
 
 /* CSS for navbar */
@@ -12,7 +12,7 @@ nav {
   background-color: #f5f5f5;
   padding: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -21,86 +21,22 @@ nav a {
   margin: 0 10px;
   color: #000;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #333;
-  background-color: #bfc0c0; /* background colour on hover */
-  border-radius: 5px; /* rounded corners on hover */
-  padding: 5px 10px; /* Adjusts padding on hover */
-}
-
-/* CSS for search bar */
-.search-bar {
-  margin-left: auto; /* Moves the search bar to the right */
-}
-
-.search-bar label {
-  margin-right: 5px; /* Adds spacing between label and input */
+  color: #4f5d75;
 }
 
 h1,
 h2,
 h3 {
-  display: inline-block;
-  padding: 10px;
-  background-color: #4f5d75; /* Sets background colour of box around headers */
   color: white;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-weight: 700;
-  border-radius: 10px;
+  margin-bottom: 10px;
 }
-
-section {
-  margin-bottom: 20px;
-}
-
-p,
-ul,
-ol {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 400;
-  color: white; /* Sets text colour to white */
-}
-
-footer {
-  background-color: #f5f5f5;
-  padding: 10px;
-  text-align: center;
-}
-
-/* Flexbox */
-.flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.flex-item {
-  flex-basis: 30%;
-  padding: 20px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-item img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 15px; /* rounds the edges */
-}
-
-.highlighted {
-  border: 2px solid #f00;
-}
-
-/* Flexbox for portfolio and mission */
 
 .section-container {
   display: flex;
@@ -108,14 +44,97 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.section-container section {
-  margin-bottom: 30px;
+/* CSS for mission section */
+.mission-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mission-content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 601px) {
+  .section-container:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .section-container:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mission-section {
+    flex-basis: 50%; /* On larger screens, set the section width to 50% */
+    max-width: 600px; /* Set a maximum width for the mission section */
+    margin: 0 auto; /* Center align the section */
+  }
+}
+
+p,
+ul,
+ol {
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Flexbox for image gallery */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: -5px;
+  margin-bottom: 40px;
+}
+
+.image-gallery img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: none;
+}
+
+@media screen and (max-width: 600px) {
+  .image-gallery img {
+    flex-basis: 50%;
+    max-width: calc(50% - 10px);
+  }
+}
+
+.rating {
+  color: #ffd700;
+  font-size: 20px;
+  display: inline-block;
 }
 
 /* CSS for Skills list */
-
 .skills-list {
   list-style: none;
   padding: 0;
@@ -123,6 +142,7 @@ footer {
   column-gap: 0px;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .skills-list h3 {
@@ -133,36 +153,18 @@ footer {
   margin-bottom: 10px;
 }
 
-.rating {
-  color: #ffd700;
-  font-size: 20px;
-  display: inline-block;
-}
-
 /* CSS for Interests list */
-
 .interests-list {
   list-style: none;
   padding: 0;
+  margin-bottom: 60px;
 }
 
 .interests-list li {
   margin-bottom: 10px;
 }
 
-footer {
-  color: #333;
-  background-color: #f5f5f5;
-  padding: 10px;
-  text-align: center;
-  position: fixed; /* Position the footer as fixed so it doesn't move */
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
 /* projects.html CSS */
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -188,4 +190,19 @@ tbody td:nth-child(3) {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 60px;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 10px;
+  text-align: center;
 }
