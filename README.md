@@ -1,6 +1,6 @@
-# Sparta Academy C# Developer
+# .NET Developer
 
-Welcome to the repository for my C# Developer exercises! This repository contains all of the exercises I have completed during my 8-week training course provided by Sparta Academy.
+Welcome to the repository for my C# Developer exercises! This repository contains all of the exercises I completed during a 10-week training course provided by Sparta Global.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ Welcome to the repository for my C# Developer exercises! This repository contain
 
 ## Getting Started
 
-To get started with this project, simply clone this repository to your local machine:
+To review my code, simply clone this repository to your local machine:
 
 ```bash
 git clone <https://github.com/philipthomas6w/dotNETDeveloper.git>
@@ -26,7 +26,7 @@ git clone <https://github.com/philipthomas6w/dotNETDeveloper.git>
 
 ## Prerequisites
 
-- Visual Studio (Community or Professional) installed on your machine
+- Visual Studio (Community or Professional) or JetBrains Rider installed on your machine
 - .NET Core SDK (version X.X.X or later) installed on your machine
 
 ## Running the Exercises
@@ -39,7 +39,7 @@ Each week's exercises are located in their respective directories within this re
 
 ## Built With
 
-- C# programming language
+- C#
 - .NET Framework
 - Visual Studio 2022
 
@@ -49,4 +49,4 @@ Each week's exercises are located in their respective directories within this re
 
 ## Acknowledgments
 
-- I would like to thank my instructor Peter Bellaby for his guidance and support throughout this training course, as well as my fellow trainees.
+- I would like to thank my instructor Peter Bellaby for his guidance throughout the training, as well as my fellow trainees for their encouragement and support.
