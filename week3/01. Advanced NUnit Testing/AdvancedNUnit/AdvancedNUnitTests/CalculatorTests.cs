@@ -4,7 +4,7 @@ namespace AdvancedNUnitTests;
 
 public class CalculatorTests
 {
-    private Calculator _sut;
+    private Calculator? _sut;  // _sut means "subject under test"
     int i = 0;
     
     [OneTimeSetUp]
@@ -50,9 +50,8 @@ public class CalculatorTests
     [Test]
     public void SomeConstraints()
     {
-        var _sut = new Calculator(); // _sut means "subject under test"
-        _sut.Num1 = 4;
-        _sut.Num2 = 2;
+        _sut!.Num1 = 4;
+        _sut!.Num2 = 2;
 
         Assert.That(_sut.IsDivisible());    // Assert that something is true or false
         _sut.Num2 = 3;
@@ -63,8 +62,9 @@ public class CalculatorTests
     [Test]
     public void StringConstraints()
     {
-        var subject = new Calculator { Num1 = 4, Num2 = 2 };
-        var strResult = subject.ToString();
+        _sut!.Num1 = 4;
+        _sut!.Num2 = 2;
+        var strResult = _sut.ToString();
         Assert.That(strResult, Is.EqualTo("AdvancedNUnitApp.Calculator"));
         Assert.That(strResult, Does.Contain("Calculator"));
         Assert.That(strResult, Does.Not.Contain("Potato"));

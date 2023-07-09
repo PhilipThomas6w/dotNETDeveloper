@@ -5,7 +5,7 @@
         
         static void Main()
         {
-
+            Console.WriteLine(FizzBuzz(30));
         }
 
         public static string FizzBuzz(int number)
@@ -17,7 +17,7 @@
                 if (i == 0)
                     return "";
                 else if (i % 3 == 0 && i % 5 == 0)
-                    fizzBuzzString += "FizzBuzz";
+                    fizzBuzzString += "FizzBuzz ";
                 else if (i % 3 == 0)
                     fizzBuzzString += "Fizz ";
                 else if (i % 5 == 0)

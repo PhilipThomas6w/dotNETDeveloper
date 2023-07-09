@@ -12,6 +12,7 @@ public class Vehicle
 
     public int NumPassengers { get; set; }
     public int Position { get; set; }
+    public int Speed { get; }
 
     public Vehicle()
     {
@@ -20,23 +21,25 @@ public class Vehicle
 
     public Vehicle(int capacity, int speed = 10)
     {
-        
+        _capacity = capacity;
+        Speed = speed;
+        Position = 0;
     }
-
-    public int Speed { get; }
 
     public string Move()
     {
-        throw new NotImplementedException();
+        Position += Speed;
+        return $"Moving along";
     }
 
     public string Move(int times)
     {
-        throw new NotImplementedException();
+        Position += Speed * times;
+        return $"Moving along {times} times";
     }
 
     public override string ToString()
     {
-        throw new NotImplementedException();
+        return $"{base.ToString()} capacity: {_capacity} passengers: {NumPassengers} speed: {Speed} position: {Position}";
     }
 }
